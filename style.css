@@ -1,0 +1,163 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  --gray-100: #e1e1e6;
+  --gray-500: #323238;
+  --gray-900: #121214;
+
+  --yellow-500: #f7dd43;
+
+  --blue-500: #338af3;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 125%;
+  color: var(--gray-100);
+
+  background: var(--gray-900) url(/assets/bg-blue.png) fixed;
+  background-position-x: center;
+  background-position-y: 101%;
+}
+
+#app {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 0 1rem;
+}
+
+header {
+  margin-top: 3.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+header img {
+  width: 97.49px;
+  height: auto;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 125%;
+  text-transform: uppercase;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    rgba(217, 217, 217, 0.8) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+main {
+  margin-top: 3.9375rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+#card {
+  flex: 1 0;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 2rem 1.43rem;
+  gap: 3.31rem;
+
+  width: fit-content;
+
+  background: #202024;
+  border-bottom: 2px solid var(--blue-500);
+  border-radius: 6px;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  gap: 1rem;
+
+  font-size: 1.5rem;
+  width: fit-content;
+  height: 46px;
+  color: var(--yellow-500);
+
+  border: 1px solid var(--blue-500);
+  border-radius: 6px;
+}
+
+h2 span {
+  font-size: 0.875rem;
+  color: var(--gray-100);
+  text-transform: uppercase;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  gap: 4.2rem;
+  width: fit-content;
+}
+
+li + li {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--gray-500);
+}
+
+li time {
+  font-weight: 900;
+  font-size: 2.25rem;
+  color: var(--gray-100);
+}
+
+li img {
+  width: 50px;
+  height: 50px;
+}
+
+@media (max-width: 430px) {
+  body {
+    font-size: 0.75rem;
+  }
+
+  li {
+    gap: 2.2rem;
+  }
+
+  li time {
+    font-size: 1.5rem;
+  }
+
+  li img {
+    width: 40px;
+    height: 40px;
+  }
+}
