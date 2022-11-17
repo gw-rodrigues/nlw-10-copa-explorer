@@ -29,7 +29,7 @@ body {
   align-items: center;
   flex-direction: column;
 
-  padding: 0 1rem;
+  padding: 0 2.5625rem 5rem 2.5625rem;
 }
 
 header {
@@ -58,7 +58,6 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
 }
 
 main {
@@ -70,7 +69,6 @@ main {
 
 #card {
   flex: 1 0;
-  width: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -114,17 +112,19 @@ ul {
   padding: 0px;
   gap: 1.5rem;
   list-style: none;
+  width: 100%;
 }
 
 li {
+  flex: 1;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 0;
   margin: 0;
-  gap: 4.2rem;
-  width: fit-content;
+  gap: 1.375rem;
+  min-width: 270px;
 }
 
 li + li {
@@ -143,17 +143,28 @@ li img {
   height: 50px;
 }
 
-@media (max-width: 430px) {
-  body {
-    font-size: 0.75rem;
+@media (max-width: 765px) {
+  #app {
+    width: fit-content;
+    max-width: 316px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 350px) {
+  #app {
+    width: fit-content;
+    max-width: 316px;
+    margin: 0 auto;
+    padding: 0 1rem 5rem 1rem;
   }
 
   li {
-    gap: 2.2rem;
+    min-width: auto;
   }
 
   li time {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 
   li img {
