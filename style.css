@@ -15,21 +15,21 @@ body.green {
   /* green theme */
   --card-bg-color: #1a1f1b;
   --theme-color: #047c3f;
-  --bg-url: url(/assets/bg-green.png);
+  --bg-url: url(/assets/bg-green.svg);
 }
 
 body.blue {
   /* blue theme */
   --card-bg-color: #202024;
   --theme-color: #338af3;
-  --bg-url: url(/assets/bg-blue.png);
+  --bg-url: url(/assets/bg-blue.svg);
 }
 
 body.yellow {
   /* yellow theme */
   --card-bg-color: #1d1c19;
   --theme-color: #f7dd43;
-  --bg-url: url(/assets/bg-yellow.png);
+  --bg-url: url(/assets/bg-yellow.svg);
 }
 
 body {
@@ -38,10 +38,10 @@ body {
   font-size: 0.875rem;
   line-height: 125%;
   color: var(--gray-100);
+  overflow-x: hidden;
 
-  background: var(--background-color) var(--bg-url) fixed;
-  background-position-x: center;
-  background-position-y: 101%;
+  transition: background 0.2s;
+  background: var(--background-color) var(--bg-url) no-repeat center top / cover;
 }
 
 #app {
@@ -125,6 +125,8 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .card {
@@ -137,6 +139,7 @@ main {
   gap: 3.31rem;
 
   width: fit-content;
+  max-width: 320px;
 
   background: var(--card-bg-color);
   border-bottom: 2px solid var(--theme-color);
