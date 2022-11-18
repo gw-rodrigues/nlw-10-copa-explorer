@@ -38,10 +38,8 @@ body {
   font-size: 0.875rem;
   line-height: 125%;
   color: var(--gray-100);
-  overflow-x: hidden;
-
   transition: background 0.2s;
-  background: var(--background-color) var(--bg-url) no-repeat center top / cover;
+  background: var(--background-color) var(--bg-url) no-repeat fixed top / cover;
 }
 
 #app {
@@ -54,21 +52,21 @@ body {
 
 nav {
   width: 100%;
-  height: 30px;
+  height: fit-content;
 
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 0.5rem;
   padding: 0.5rem;
 }
 
 nav button {
   flex-basis: 50px;
-  height: 20px;
+  height: 25px;
   cursor: pointer;
   border: 1px solid var(--gray-500);
   border-radius: 6px;
-  font-size: 0.5rem;
+  font-size: 0.55rem;
   font-weight: 900;
   text-transform: uppercase;
 
@@ -90,6 +88,31 @@ nav button:nth-child(2) {
 nav button:nth-child(3) {
   color: var(--gray-500);
   background-color: #f7dd43;
+}
+
+#google_translate_element div,
+#google_translate_element span {
+  font-size: 0;
+}
+
+#google_translate_element span {
+  display: none;
+}
+
+#google_translate_element select {
+  width: 160px;
+  height: 30px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  text-align: center;
+  background-color: var(--card-bg-color);
+  color: var(--yellow-500);
+  border-color: var(--theme-color);
+  outline: none;
+}
+
+.time-zone {
+  font-size: 0.65rem;
 }
 
 header {
@@ -241,10 +264,6 @@ li img:hover {
     width: fit-content;
     max-width: 316px;
     margin: 0 auto;
-  }
-
-  nav {
-    justify-content: center;
   }
 }
 
