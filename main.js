@@ -82,7 +82,7 @@ const matchesList = [
       { hour: '11:00', teamA: 'Cameroon', teamB: 'Serbia' },
       { hour: '14:00', teamA: 'Korea Republic', teamB: 'Ghana' },
       { hour: '17:00', teamA: 'Brazil', teamB: 'Switzerland' },
-      { hour: '20:00', teamA: 'Switzerland', teamB: 'Uruguay' },
+      { hour: '20:00', teamA: 'Portugal', teamB: 'Uruguay' },
     ],
   },
   {
